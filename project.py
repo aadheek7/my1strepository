@@ -1,3 +1,4 @@
+#without returns and losses
 from tabulate import tabulate
 
 headers = ["Date", "Particulars", "Receipts", "Issues", "Balance"]
