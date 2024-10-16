@@ -81,7 +81,8 @@ Press (e) to exit
             else:
                 balance_list[i][0] -= units_to_be_issued
                 balance_list[i][2] = balance_list[i][0] * balance_list[i][1]
-                issue_list.append([units_to_be_issued, balance_list[i][1], units_to_be_issued * balance_list[i][1]])
+                if units_to_be_issued != 0:
+                    issue_list.append([units_to_be_issued, balance_list[i][1], units_to_be_issued * balance_list[i][1]])
                 break
 
         issue_table = tabulate(issue_list, headers = receipt_headers, tablefmt = "fancy_grid")
