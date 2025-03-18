@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: lightgray;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+            width: 300px;
+            text-align: center;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid silver;
+        }
+        button {
+            background: limegreen;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover { background: forestgreen; }
+    </style>
+    <script>
+        function showAlert(event) {
+            event.preventDefault();
+            alert("Form Submitted!");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Library Form</h2>
+        <form onsubmit="showAlert(event)">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <select required>
+                <option value="">Select Membership</option>
+                <option>Student</option>
+                <option>Faculty</option>
+                <option>Guest</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
