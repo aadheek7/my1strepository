@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+    <style>.highlight { background: yellow; }</style>
+</head>
+<body>
+    <input id="text" placeholder="Text">
+    <input id="search" placeholder="Substring">
+    <button onclick="find()">Go</button>
+    <p id="result"></p>
+
+    <script>
+        function find() {
+            result.innerHTML = text.value.includes(search.value) ? 
+                text.value.replaceAll(search.value, `<span class="highlight">${search.value}</span>`) : 
+                "Not found";
+        }
+    </script>
+</body>
+</html>
